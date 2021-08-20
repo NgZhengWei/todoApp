@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, textarea {
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+form {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input[type='text'] {
+    padding: 0.3rem;
+    width: 90%;
+    margin-bottom: 0.3rem;
+}
+
+.todo-form-btns {
+    width: 90%;
+    font-family: Lato, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.todo-form-btns button {
+    padding: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+.project-form-btns {
+    width: 90%;
+    font-family: Lato, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.project-form-btns button {
+    padding: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    color: whitesmoke;
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header h1 {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.hamburger-menu {
+    width: 2rem;
+    fill: whitesmoke;
+    display: none;
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    min-height: 100vh;
+}
+
+#leftbar {
+    background-color: #9eb4ff;
+    padding: 1rem 2rem 0 2rem;
+}
+
+#projects > * {
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+}
+
+
+#projects h2 {
+    font-size: 2rem;
+}
+
+.add-project {
+    background-color: #5c5c5c;
+    border-radius: 4px;
+    color: whitesmoke;
+}
+
+#projects div:hover {
+    background-color: #7d90ce;
+    border-radius: 4px;
+}
+
+.active-project {
+    background-color: #7d90ce;
+    border-radius: 4px;
+    color: whitesmoke;
+}
+
+#right {
+    padding: 1rem 3rem 0 3rem;
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 2rem 0.5rem 0;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0.2rem;
+}
+
+.todo:hover {
+    background-color: #b4b4b4;
+    border-radius: 4px;
+}
+
+.add-todo {
+    background-color: #5c5c5c;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    color: whitesmoke;
+}
+
+.add-todo:hover {
+    background-color: #969696;
+    color: black;
+}
+
+.todo-rightside {
+    display: flex;
+}
+
+.checkbox {
+    width: 1.2rem;
+    height: auto;
+    margin-right: 0.3rem;
+}
+
+.todo-task {
+    display: flex;
+}
+
+.linethrough {
+    text-decoration: line-through;
+}
+
+.dropdown-arrow{
+    width: 1.2rem;
+    margin-left: 0.8rem;
+    transition: 0.3s;
+}
+
+.dropdown-arrow:hover {
+    transform: scale(1.2) translateX(-2px);
+}
+
+.todo-date{
+    transition: 0.3s;
+}
+
+.todo-date:hover{
+    transform: scale(1.1) translateX(-2px);
+}
+
+.dropdown-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-area textarea {
+    margin: 0 0 0.5rem 1.7rem;
+    font-size: 1rem;
+    width: 80%;
+    padding: 0.5rem 0.8rem;
+}
+
+.delete-icon {
+    width: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-icon:hover {
+    transform: scale(1.2) translateX(-2px);
+}
+
+.save-icon {
+    width: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 0.5rem;
+}
+
+.save-icon:hover {
+    transform: scale(1.2) translateX(-2px);
+}
+
+.footer {
+    text-align: center;
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: whitesmoke;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .contents {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: auto;
+    }
+    #leftbar {
+        padding: 1rem 2rem 1rem 2rem;
+    }
+    #right {
+        padding: 1rem 0 0 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .invisible {
+        display: none;
+    }
+}
